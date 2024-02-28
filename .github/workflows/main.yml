@@ -1,27 +1,21 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ['main']
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: 'pages'
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -46,8 +40,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload dist repository
           path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+      - name: Discord Commits
+        uses: Sniddl/discord-commits@v1.3
+        with:
+          webhook: https://discord.com/api/webhooks/932921577794854923/SoFxgv-6RDbqqvZS7zQtOGn22DGk9yq4no0U1cb0uKxSQ_qD6DVXspBEOZJTl0TsbFsY
+          message: 'Deployment done, check it out: https://commentray.valens.dev/'
