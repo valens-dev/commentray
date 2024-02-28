@@ -1,4 +1,58 @@
+/** @format */
+
 .header {
-    background-color: #221D28;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 67px;
+  padding: 25px;
+  background-color: #221d28;
+  color: white;
+}
+.followed-button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.followed-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.header-logo-link {
+  display: block;
+}
+.header-left-elements,
+.header-center-elements,
+.header-right-elements {
+  display: flex;
+}
+.header-left-elements {
+  gap: 30px;
+}
+
+.header-right-elements {
+  height: 100%;
+  align-items: center;
+}
+.header-hamburger-icon {
+  content: "";
+  height: 24px;
+  width: 24px;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.81517 5.5H23.8152" stroke="%23FCFCFC" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.81517 12.5H23.8152" stroke="%23FCFCFC" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.81517 19.5H23.8152" stroke="%23FCFCFC" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+.header-live-container button {
+  height: 67px;
+  width: 162px;
+  box-shadow: none;
+  background-color: #0049ff;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+.header-user-settings {
+  height: 37px;
 }
