@@ -47,5 +47,5 @@ jobs:
       - name: Discord Commits
         uses: Sniddl/discord-commits@v1.3
         with:
-          webhook: https://discord.com/api/webhooks/932921577794854923/SoFxgv-6RDbqqvZS7zQtOGn22DGk9yq4no0U1cb0uKxSQ_qD6DVXspBEOZJTl0TsbFsY
+          webhook: https://discord.com/api/webhooks/1212396170115022899/jYpF4ddOZ7sTcIcQezjU99CY3p-N9llQEkZwa_-NO1E-iezFceCGDf7nfVKs5cOg3Phv
           message: 'Deployment done, check it out: https://commentray.valens.dev/'
