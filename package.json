@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://valens-dev.github.io/commentray",
+  "homepage": "https://commentray.valens.dev/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
