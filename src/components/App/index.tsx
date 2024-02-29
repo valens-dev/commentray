@@ -1,6 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
-import Home from '../Home';
-import Header from '../Header';
+import { Routes, Route } from "react-router-dom";
+import Home from "../Home";
+import Header from "../Header";
 
 function App() {
   return (
@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
