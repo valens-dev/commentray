@@ -1,9 +1,7 @@
-import './styles.css';
+import "./styles.scss";
 
 const Streams = () => {
-  return (
-    <div className='streams'>Streams</div>
-  )
-}
+  return <div className="streams">Streams</div>;
+};
 
-export default Streams
+export default Streams;

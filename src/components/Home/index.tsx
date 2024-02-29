@@ -1,10 +1,11 @@
-import Streams from '../Streams'
+import Streams from "../Streams";
 
 const Home = () => {
-  return (<>
-   <Streams/>
-  </>
-  )
-}
+  return (
+    <>
+      <Streams />
+    </>
+  );
+};
 
-export default Home
+export default Home;

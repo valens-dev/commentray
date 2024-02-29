@@ -1,0 +1,8 @@
+/** @format */
+@import "./styles/variables";
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  background-color: $secondary-color;
+}
