@@ -1,6 +1,30 @@
-import { Autocomplete, Button, TextField, Menu, MenuItem } from '@mui/material';
+import { Autocomplete, Button, TextField, Menu, MenuItem, Stack } from '@mui/material';
 import * as React from 'react';
-import './styles.css';
+import './styles.scss';
+
+function FreeSolo() {
+  return (
+    <Stack spacing={2} sx={{ width: 300 }}>
+      <Autocomplete
+        freeSolo
+        id="free-solo"
+        disableClearable
+        options={['Football', 'Basketball', 'Volleyball', 'Snooker', 'Hockey']}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            label="Search"
+            InputProps={{
+              ...params.InputProps,
+              type: 'search',
+            }}
+          />
+        )}
+      />
+    </Stack>
+  );
+}
+
 
 const HamburgerMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -66,20 +90,16 @@ const Header = () => {
       </div>
 
       <div className="header-center-elements">
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={[]}
-          sx={{ width: 300 }}
-          renderInput={(params) => <TextField {...params} label="Movie" />}
-        />
+        <div className="header-search-box">
+          <FreeSolo />
+        </div>
       </div>
 
       <div className='header-right-elements'>
         <div className='header-live-container'>
-        <Button variant="contained">
-          Go Live
-        </Button>
+          <Button variant="contained">
+            Go Live
+          </Button>
         </div>
         <div className="header-menu">
           <HamburgerMenu />

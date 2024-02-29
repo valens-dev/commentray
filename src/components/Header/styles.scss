@@ -1,0 +1,107 @@
+/** @format */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 67px;
+  padding: 25px;
+  background-color: #221d28;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+
+  .followed-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .followed-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .header-logo-link {
+    display: block;
+  }
+
+  .header-center-elements {
+    display: flex;
+  }
+
+  .header-left-elements {
+    display: flex;
+    gap: 30px;
+  }
+
+  .header-center-elements {
+    display: flex;
+    div.MuiInputBase-root {
+      background-color: #05010c;
+      border-radius: 9px;
+    }
+  }
+
+  .header-right-elements {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .header-hamburger-icon {
+    content: "";
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.81517 5.5H23.8152" stroke="%23FCFCFC" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.81517 12.5H23.8152" stroke="%23FCFCFC" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.81517 19.5H23.8152" stroke="%23FCFCFC" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  }
+
+  .header-live-container button {
+    height: 67px;
+    width: 162px;
+    box-shadow: none;
+    background-color: #0049ff;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .header-user-settings {
+    height: 37px;
+  }
+
+  .header-search-box {
+    .css-fedopx-MuiStack-root {
+      width: 362px;
+    }
+
+    label#free-solo-label {
+      color: #7a777e;
+      font-weight: 200;
+      top: -8px;
+    }
+
+    .MuiInputBase-root fieldset {
+      border-color: #3d3d3d;
+    }
+
+    input.MuiInputBase-input {
+      color: #7a777e;
+    }
+
+    .MuiAutocomplete-root .MuiFormControl-root {
+      label#free-solo {
+        padding: 0 5px;
+        color: #7a777e;
+        background-color: #05010c;
+      }
+
+      > .MuiInputBase-root {
+        height: 40px;
+        padding: 0;
+      }
+    }
+  }
+}
