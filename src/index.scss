@@ -1,5 +1,8 @@
+/** @format */
+@import "./styles/variables";
+
 body {
   max-width: 1440px;
   margin: auto;
-  background-color: #05010C;
+  background-color: $secondary-color;
 }
