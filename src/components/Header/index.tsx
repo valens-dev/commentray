@@ -1,6 +1,11 @@
-import { Autocomplete, Button, TextField, Menu, MenuItem, Stack } from '@mui/material';
+import { Autocomplete, Button, TextField, Menu, MenuItem, Stack, InputAdornment } from '@mui/material';
+
 import * as React from 'react';
 import './styles.scss';
+import companyLogo from './../../assets/header-logo.svg';
+import profilePicture from './../../assets/profile.png';
+import FiltersIcon from './../../assets/filters-icon.svg';
+import SearchIcon from './../../assets/search-icon.svg';
 
 function FreeSolo() {
   return (
@@ -17,6 +22,16 @@ function FreeSolo() {
             InputProps={{
               ...params.InputProps,
               type: 'search',
+              endAdornment: (
+                <>
+                  <InputAdornment position="end">
+                    <img className="filter-button" src={FiltersIcon} />
+                  </InputAdornment>
+                  <InputAdornment position="end">
+                    <img className="search-button" src={SearchIcon} />
+                  </InputAdornment>
+                </>
+              )
             }}
           />
         )}
@@ -24,7 +39,6 @@ function FreeSolo() {
     </Stack>
   );
 }
-
 
 const HamburgerMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -74,7 +88,7 @@ const Header = () => {
       <div className='header-left-elements'>
         <div className="header-logo-container">
           <a className="header-logo-link" href='https://www.google.com/'>
-            <img src='./src/assets/header-logo.svg'></img>
+            <img src={companyLogo} />
           </a>
         </div>
         <div className="followed-button">
@@ -105,7 +119,7 @@ const Header = () => {
           <HamburgerMenu />
         </div>
         <div className='header-user-settings'>
-          <img src='./src/assets/profile.png'></img>
+          <img src={profilePicture} />
         </div>
       </div>
     </div>

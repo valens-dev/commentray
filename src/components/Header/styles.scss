@@ -1,4 +1,4 @@
-/** @format */
+
 @import "./../../styles/variables";
 
 .header {
@@ -29,6 +29,20 @@
 
   .header-center-elements {
     display: flex;
+    div.MuiInputBase-root {
+      background-color: #05010c;
+      border-radius: 9px;
+    }
+    .filter-button {
+      width: 30px;
+      height: 39px;
+    }
+    .search-button {
+      width: 22px;
+      height: 39px;
+      padding: 0 14px;
+      background-color: #221d28;
+      }
   }
 
   .header-left-elements {
@@ -36,13 +50,6 @@
     gap: 30px;
   }
 
-  .header-center-elements {
-    display: flex;
-    div.MuiInputBase-root {
-      background-color: #05010c;
-      border-radius: 9px;
-    }
-  }
 
   .header-right-elements {
     display: flex;
