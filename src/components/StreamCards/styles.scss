@@ -1,0 +1,13 @@
+/** @format */
+
+.stream-cards {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 20px 30px;
+  > img {
+    height: 200px;
+    width: 138px;
+  }
+}
