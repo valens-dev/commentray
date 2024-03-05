@@ -1,7 +1,7 @@
 import "./styles.scss"
 import { Button } from '@mui/material';
 
-const Navigationbuttons = () => {
+const NavigationButtons = () => {
   
   return (
     <div className="navigation-buttons">
@@ -15,4 +15,4 @@ const Navigationbuttons = () => {
 
 };
 
-export default Navigationbuttons;
+export default NavigationButtons;

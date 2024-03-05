@@ -1,12 +1,12 @@
 import Streams from "../Streams";
-import StreamCard from "../StreamCard";
-import Navigationbuttons from "../NavigationButtons";
+import StreamCards from "../StreamCards";
+import NavigationButtons from "../NavigationButtons";
 
 const Home = () => {
   return (
     <>
-      <StreamCard />
-      <Navigationbuttons />
+      <StreamCards />
+      <NavigationButtons />
       <Streams />
     </>
   );

@@ -1,4 +1,4 @@
-const imageUrls: string[] = [
+const cardImages: string[] = [
     '/src/assets/card-images/card-image1.png',
     '/src/assets/card-images/card-image2.png',
     '/src/assets/card-images/card-image3.png',
@@ -10,4 +10,4 @@ const imageUrls: string[] = [
     '/src/assets/card-images/card-image9.png',
   ];
   
-  export default imageUrls;
+  export default cardImages;
