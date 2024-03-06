@@ -3,7 +3,7 @@ import cardImages from "../../data/imageData"
 
 
 const StreamCards = () => {
-  
+
   return (
     <div className="stream-cards">
       {cardImages.map((imageUrl, index) => (

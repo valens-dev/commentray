@@ -1,9 +1,10 @@
-import * as React from "react";
+import { useState } from "react";
+
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
-export default function ColorButton() {
-  const [subType, setSubType] = React.useState("live");
+const Toggle = () => {
+  const [subType, setSubType] = useState("live");
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -34,3 +35,5 @@ export default function ColorButton() {
     </Box>
   );
 }
+
+export default Toggle;

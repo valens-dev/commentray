@@ -8,7 +8,7 @@ const FreeSolo = () => {
     <Stack spacing={2} sx={{ width: 300 }}>
       <Autocomplete
         freeSolo
-        id="free-solo"
+        id="search-box"
         disableClearable
         options={["Football", "Basketball", "Volleyball", "Snooker", "Hockey"]}
         renderInput={(params) => (

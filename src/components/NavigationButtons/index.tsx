@@ -2,7 +2,7 @@ import "./styles.scss"
 import { Button } from '@mui/material';
 
 const NavigationButtons = () => {
-  
+
   return (
     <div className="navigation-buttons">
       <Button variant="contained">Audio only</Button>

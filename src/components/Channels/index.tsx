@@ -1,11 +1,11 @@
 import "./styles.scss"
-import { StrictMode } from "react";
-import Toggle from './toggle';
+import "../Toggle/styles.scss"
+import Toggle from '../Toggle';
 import IconButton from '@mui/material/IconButton';
 import FilterIcon from "./../../assets/filter-streams-icon.svg";
 
 const Channels = () => {
-  
+
   return (
     <div className="ch-container">
       <div className="ch-head">
@@ -13,9 +13,7 @@ const Channels = () => {
           Channels
         </div>
         <div className="ch-live-toggle">
-          <StrictMode>
-            <Toggle />
-          </StrictMode>
+          <Toggle />
         </div>
         <div className="ch-filter-button">
           <IconButton color="secondary" aria-label="filter results">
@@ -27,9 +25,8 @@ const Channels = () => {
         <div className="ch-list-inner-container">
           <div className="ch-streamer-card">
             <div className="ch-streamer-icon">
-              <img/>
+              <img />
             </div>
-
             <div className="ch-streamer-info">
               <div className="ch-streamer-title">
                 <div className="ch-streamer-name">Doigby</div>
@@ -37,8 +34,6 @@ const Channels = () => {
               </div>
               <div className="ch-streamer-stream-tag">#WorldCup24</div>
             </div>
-
-            
           </div>
           List
         </div>

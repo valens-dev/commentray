@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import "./styles.scss";
 import companyLogo from "./../../assets/header-logo.svg";
 import profilePicture from "./../../assets/profile.png";
-import FreeSolo from "../FreeSolo";
+import FreeSolo from "../SearchBox";
 import HamburgerMenu from "../HamburgerMenu";
 
 const Header = () => {

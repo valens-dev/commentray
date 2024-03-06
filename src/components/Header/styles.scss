@@ -1,3 +1,4 @@
+/** @format */
 
 @import "./../../styles/variables";
 
@@ -41,15 +42,14 @@
       width: 22px;
       height: 39px;
       padding: 0 14px;
-      background-color: #221d28;
-      }
+      background-color: $primary-color;
+    }
   }
 
   .header-left-elements {
     display: flex;
     gap: 30px;
   }
-
 
   .header-right-elements {
     display: flex;
@@ -84,7 +84,7 @@
       width: 362px;
     }
 
-    label#free-solo-label {
+    label#search-box-label {
       color: #7a777e;
       font-weight: 200;
       top: -8px;
@@ -99,7 +99,7 @@
     }
 
     .MuiAutocomplete-root .MuiFormControl-root {
-      label#free-solo {
+      label#search-box {
         padding: 0 5px;
         color: #7a777e;
         background-color: #05010c;

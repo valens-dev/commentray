@@ -1,0 +1,31 @@
+/** @format */
+
+@import "./../../styles/variables";
+
+.MuiBox-root {
+  height: 100%;
+  .mask-box {
+    border-radius: 9px;
+    position: relative;
+    background: $primary-color;
+  }
+  .mask-box .mask {
+    width: 140px;
+    height: 100%;
+    border-radius: 9px;
+    background: #0049ff;
+    position: absolute;
+    transition: all 0.5s ease;
+  }
+  .mask-box .MuiButton-root {
+    border-radius: 9px;
+    width: 140px;
+    height: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.2s 0.1s ease;
+  }
+  .mask-box .MuiButton-root:hover {
+    opacity: 0.8;
+  }
+}
