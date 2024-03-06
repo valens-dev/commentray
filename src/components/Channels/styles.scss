@@ -1,10 +1,8 @@
-/** @format */
-
 @import "./../../styles/variables";
 
 .ch-container {
   width: 553px;
-  color: white;
+  color: $font-primary-color;
   display: flex;
   flex-direction: column;
   margin: 10px 20px 30px;
@@ -15,19 +13,20 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 33px 0;
+
     .ch-title {
       font-weight: 600;
       font-size: 42px;
       width: 210px;
     }
-    .ch-live-toggle {
-    }
+
     .ch-filter-button {
       .MuiButtonBase-root {
         border-radius: 9px;
         height: 49px;
         width: 49px;
         background-color: $primary-color;
+
         img {
           width: 21px;
           height: 21px;
@@ -35,6 +34,7 @@
       }
     }
   }
+
   .ch-list {
     display: flex;
     height: 500px;

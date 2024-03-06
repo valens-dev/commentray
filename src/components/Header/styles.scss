@@ -1,5 +1,3 @@
-/** @format */
-
 @import "./../../styles/variables";
 
 .header {
@@ -9,7 +7,7 @@
   height: 67px;
   padding: 25px;
   background-color: $primary-color;
-  color: white;
+  color: $font-primary-color;
   font-family: $font-family, sans-serif;
 
   .followed-button {
@@ -30,14 +28,17 @@
 
   .header-center-elements {
     display: flex;
+
     div.MuiInputBase-root {
       background-color: #05010c;
       border-radius: 9px;
     }
+
     .filter-button {
       width: 30px;
       height: 39px;
     }
+
     .search-button {
       width: 22px;
       height: 39px;
@@ -105,7 +106,7 @@
         background-color: #05010c;
       }
 
-      > .MuiInputBase-root {
+      >.MuiInputBase-root {
         height: 40px;
         padding: 0;
       }

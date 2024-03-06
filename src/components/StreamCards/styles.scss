@@ -1,12 +1,13 @@
-/** @format */
+@import "./../../styles/variables";
 
 .stream-cards {
-  color: white;
+  color: $font-primary-color;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 10px 20px 30px;
-  > img {
+
+  >img {
     height: 200px;
     width: 138px;
   }
