@@ -1,5 +1,5 @@
 import "./styles.scss"
-import cardImages from "../../data/imageData"
+import cardImages from "../../data/images"
 
 
 const StreamCards = () => {
