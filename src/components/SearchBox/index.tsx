@@ -3,12 +3,12 @@ import { Autocomplete, TextField, Stack, InputAdornment } from "@mui/material";
 import FiltersIcon from "./../../assets/filters-icon.svg";
 import SearchIcon from "./../../assets/search-icon.svg";
 
-const FreeSolo = () => {
+const SearchBox = () => {
   return (
     <Stack spacing={2} sx={{ width: 300 }}>
       <Autocomplete
         freeSolo
-        id="free-solo"
+        id="search-box"
         disableClearable
         options={["Football", "Basketball", "Volleyball", "Snooker", "Hockey"]}
         renderInput={(params) => (
@@ -36,4 +36,4 @@ const FreeSolo = () => {
   );
 };
 
-export default FreeSolo;
+export default SearchBox;

@@ -1,4 +1,3 @@
-
 @import "./../../styles/variables";
 
 .header {
@@ -8,7 +7,7 @@
   height: 67px;
   padding: 25px;
   background-color: $primary-color;
-  color: white;
+  color: $font-primary-color;
   font-family: $font-family, sans-serif;
 
   .followed-button {
@@ -29,27 +28,29 @@
 
   .header-center-elements {
     display: flex;
+
     div.MuiInputBase-root {
       background-color: #05010c;
       border-radius: 9px;
     }
+
     .filter-button {
       width: 30px;
       height: 39px;
     }
+
     .search-button {
       width: 22px;
       height: 39px;
       padding: 0 14px;
-      background-color: #221d28;
-      }
+      background-color: $primary-color;
+    }
   }
 
   .header-left-elements {
     display: flex;
     gap: 30px;
   }
-
 
   .header-right-elements {
     display: flex;
@@ -84,7 +85,7 @@
       width: 362px;
     }
 
-    label#free-solo-label {
+    label#search-box-label {
       color: #7a777e;
       font-weight: 200;
       top: -8px;
@@ -99,13 +100,13 @@
     }
 
     .MuiAutocomplete-root .MuiFormControl-root {
-      label#free-solo {
+      label#search-box {
         padding: 0 5px;
         color: #7a777e;
         background-color: #05010c;
       }
 
-      > .MuiInputBase-root {
+      >.MuiInputBase-root {
         height: 40px;
         padding: 0;
       }

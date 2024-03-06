@@ -1,12 +1,11 @@
 import { Button, Menu, MenuItem } from "@mui/material";
-
-import * as React from "react";
+import { useState, MouseEvent } from "react";
 
 const HamburgerMenu = () => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
