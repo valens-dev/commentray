@@ -1,15 +1,18 @@
-import Streams from "../Streams";
-import StreamCards from "../StreamCards";
+import ListeningTo from "../ListeningTo";
+import CardBanners from "../CardBanners";
 import Channels from "../Channels";
 import NavigationButtons from "../NavigationButtons";
+import "./styles.scss"
 
 const Home = () => {
   return (
     <>
-      <StreamCards />
+      <CardBanners />
       <NavigationButtons />
-      <Channels />
-      <Streams />
+      <div className="home-lower-container">
+        <Channels />
+        <ListeningTo />
+      </div>
     </>
   );
 };

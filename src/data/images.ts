@@ -1,24 +1,24 @@
-import image1 from './../assets/card-images/card-image1.png';
-import image2 from './../assets/card-images/card-image2.png';
-import image3 from './../assets/card-images/card-image3.png';
-import image4 from './../assets/card-images/card-image4.png';
-import image5 from './../assets/card-images/card-image5.png';
-import image6 from './../assets/card-images/card-image6.png';
-import image7 from './../assets/card-images/card-image7.png';
-import image8 from './../assets/card-images/card-image8.png';
-import image9 from './../assets/card-images/card-image9.png';
+import banner1 from './../assets/card-banner1.png';
+import banner2 from './../assets/card-banner2.png';
+import banner3 from './../assets/card-banner3.png';
+import banner4 from './../assets/card-banner4.png';
+import banner5 from './../assets/card-banner5.png';
+import banner6 from './../assets/card-banner6.png';
+import banner7 from './../assets/card-banner7.png';
+import banner8 from './../assets/card-banner8.png';
+import banner9 from './../assets/card-banner9.png';
 
-const cardImages: string[] = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
+const streamBanners: string[] = [
+    banner1,
+    banner2,
+    banner3,
+    banner4,
+    banner5,
+    banner6,
+    banner7,
+    banner8,
+    banner9,
   ];
   
-  export default cardImages;
+  export default streamBanners;
   

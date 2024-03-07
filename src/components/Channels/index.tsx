@@ -10,13 +10,15 @@ const Channels = () => {
     <div className="ch-container">
       <div className="ch-head">
         <div className="ch-title">Channels</div>
-        <div className="ch-live-toggle">
-          <Toggle />
-        </div>
-        <div className="ch-filter-button">
-          <IconButton color="secondary" aria-label="filter results">
-            <img src={FilterIcon} alt="filter icon" />
-          </IconButton>
+        <div className="ch-buttons">
+          <div className="ch-live-toggle">
+            <Toggle />
+          </div>
+          <div className="ch-filter-button">
+            <IconButton color="secondary" aria-label="filter results">
+              <img src={FilterIcon} alt="filter icon" />
+            </IconButton>
+          </div>
         </div>
       </div>
       <div className="ch-list">

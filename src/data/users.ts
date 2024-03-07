@@ -1,11 +1,11 @@
 import { User } from "./interfaces";
 
-import image1 from './../assets/user-profiles/user-1.png';
-import image2 from './../assets/user-profiles/user-2.png';
-import image3 from './../assets/user-profiles/user-3.png';
-import image4 from './../assets/user-profiles/user-4.png';
-import image5 from './../assets/user-profiles/user-5.png';
-import image7 from './../assets/user-profiles/user-7.png';
+import image1 from './../assets/user-1.png';
+import image2 from './../assets/user-2.png';
+import image3 from './../assets/user-3.png';
+import image4 from './../assets/user-4.png';
+import image5 from './../assets/user-5.png';
+import image7 from './../assets/user-7.png';
 
 const streamerList: User[] = [
     {

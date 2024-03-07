@@ -12,7 +12,7 @@ const Toggle = () => {
         <Box
           className="mask"
           style={{
-            transform: `translateX(${subType === "live" ? 0 : "140px"})`
+            transform: `translateX(${subType === "live" ? 0 : "130px"})`
           }}
         />
         <Button
