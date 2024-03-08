@@ -7,7 +7,7 @@ import image4 from './../assets/user-4.png';
 import image5 from './../assets/user-5.png';
 import image7 from './../assets/user-7.png';
 
-const streamerList: User[] = [
+const ChannelList: User[] = [
     {
         id: 1,
         name: "Doigby",
@@ -66,5 +66,5 @@ const streamerList: User[] = [
     },
   ];
   
-  export default streamerList;
+  export default ChannelList;
   

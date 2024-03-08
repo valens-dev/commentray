@@ -1,0 +1,43 @@
+@import "./../../styles/variables";
+
+.lt-volume-slider {
+    display: flex;
+    justify-content: space-around;
+
+    .MuiBox-root {
+        width: 345px;
+
+        .MuiStack-root {
+            margin-bottom: 0;
+            padding-top: 6px;
+            padding-bottom: 6px;
+
+            .MuiSlider-root {
+                color: $font-primary-color;
+                height: 11px;
+
+                .MuiSlider-rail {
+                    height: 13px;
+                }
+
+                .MuiSlider-track {
+                    min-width: 3.2%;
+                }
+
+                .MuiSlider-thumb {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .MuiButtonBase-root {
+        padding: 0;
+        height: 51px;
+        width: 51px;
+    }
+
+    .MuiTouchRipple-root {
+        color: #50318a;
+    }
+}

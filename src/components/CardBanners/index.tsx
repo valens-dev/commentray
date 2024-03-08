@@ -1,17 +1,13 @@
 import "./styles.scss"
-import streamBanners from "../../data/images"
+import CardBannersList from "../../data/images"
 
 
-const StreamCards = () => {
+const CardBanners = () => (
+  <div className="stream-banners">
+    {CardBannersList.map((bannerUrl, index) => (
+      <img key={bannerUrl} src={bannerUrl} id={`banner-${index + 1}`} alt={`Image ${index + 1}`} />
+    ))}
+  </div>
+)
 
-  return (
-    <div className="stream-banners">
-      {streamBanners.map((imageUrl, index) => (
-        <img key={index} src={imageUrl} id={`banner-${index + 1}`} alt={`Image ${index + 1}`} />
-      ))}
-    </div>
-  );
-
-};
-
-export default StreamCards;
+export default CardBanners;
