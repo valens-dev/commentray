@@ -50,6 +50,103 @@
 
     .sc-list-inner-container {
       width: 100%;
+
+      .sc-button-menu {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .sc-chat-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .sc-notification-box {
+          display: flex;
+          justify-content: space-between;
+          height: 37px;
+
+          .notif-left {
+            display: flex;
+            gap: 13px;
+
+            .sc-notification-status-wrapper {
+              display: flex;
+              align-items: center;
+
+              .sc-notification-status {
+                height: 6px;
+                width: 6px;
+                background-color: #0049FF;
+                border-radius: 50%;
+              }
+            }
+
+            .sc-notification-icon {
+              display: flex;
+              width: 33px;
+              align-items: center;
+
+              .sc-gift-icon {
+                width: 33px;
+                height: 33px;
+              }
+            }
+
+            .notif-information {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+  
+              .sc-notif-text {
+                font-size: 14px;
+                font-weight: 500;
+              }
+  
+              .sc-notif-name {
+                font-size: 12px;
+                font-weight: 400;
+                color: #7A777E;
+              }
+            }
+
+          }
+
+          .notif-erase-button-wrapper {
+            display: flex;
+            align-items: center;
+            width: 21px;
+
+            button {
+              width: 21px;
+              height: 21px;
+              background-color: #2D2933;
+            }
+          }
+
+        }
+
+        .sc-comment-bubble {
+          display: flex;
+          gap: 20px;
+          background-color: #2D2933;
+          border-radius: 6px;
+
+          .commenter-icon {}
+
+          .comment-main-section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .comment-main-upper {
+              display: flex;
+              justify-content: space-between;
+              flex-direction: row;
+            }
+          }
+        }
+      }
     }
   }
 }

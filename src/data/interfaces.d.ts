@@ -7,3 +7,7 @@ export interface User {
   streamTag: string,
   viewerNumber: number
 }
+
+export interface StreamerCardProps {
+  streamer: User;
+}
