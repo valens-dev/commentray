@@ -1,11 +1,7 @@
 import "./styles.scss";
-import { User } from "../../data/interfaces";
+import { StreamerCardProps } from "../../data/interfaces";
 
-interface IStreamerCard {
-  streamer: User;
-}
-
-const StreamerCard = ({ streamer }: IStreamerCard) => (
+const StreamerCard = ({ streamer }: StreamerCardProps) => (
   <div className="ch-streamer-card">
     <div className="ch-card-left">
       <div className="ch-streamer-icon">

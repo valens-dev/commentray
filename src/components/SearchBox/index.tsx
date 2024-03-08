@@ -1,7 +1,7 @@
 import { Autocomplete, TextField, Stack, InputAdornment } from "@mui/material";
 
-import FiltersIcon from "./../../assets/filters-icon.svg";
-import SearchIcon from "./../../assets/search-icon.svg";
+import filtersIcon from "./../../assets/filters-icon.svg";
+import searchIcon from "./../../assets/search-icon.svg";
 
 const SearchBox = () => (
   <Stack spacing={2} sx={{ width: 300 }}>
@@ -20,10 +20,10 @@ const SearchBox = () => (
             endAdornment: (
               <>
                 <InputAdornment position="end">
-                  <img className="filter-button" src={FiltersIcon} />
+                  <img className="filter-button" src={filtersIcon} />
                 </InputAdornment>
                 <InputAdornment position="end">
-                  <img className="search-button" src={SearchIcon} />
+                  <img className="search-button" src={searchIcon} />
                 </InputAdornment>
               </>
             ),
