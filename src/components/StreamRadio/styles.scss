@@ -1,0 +1,107 @@
+@import "./../../styles/variables";
+
+.lt-container {
+  width: 460px;
+  color: $font-primary-color;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  font-family: $font-family;
+
+  .lt-head {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+
+    .lt-title {
+      font-size: 32px;
+      font-weight: 600;
+    }
+  }
+
+  .lt-stream {
+    background-color: $primary-color;
+    font-family: $font-family;
+    height: 100%;
+    padding: 30px 20px 20px 20px;
+
+    .lt-inner-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .lt-preview-screen {
+        position: relative;
+        width: 100%;
+        height: 163px;
+
+        .lt-preview-image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        .lt-screen-buttons {
+          display: flex;
+          position: absolute;
+          gap: 8px;
+          top: 12px;
+          right: 50px;
+
+          >.MuiButtonBase-root {
+            height: 48px;
+            width: 48px;
+            background: #00000040;
+            backdrop-filter: blur(10px);
+            border: 1px solid #d9d9d940;
+            box-shadow: -0.7302268743515015px 0.7302268743515015px 0.7302268743515015px -1.460453748703003px #FFFFFF59 inset;
+          }
+        }
+      }
+
+      .lt-stream-tag {
+        font-size: 24px;
+        font-weight: 600;
+        height: 82px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+      }
+
+      .lt-audio-control {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 96px;
+        padding-bottom: 24px;
+
+        .MuiButtonGroup-root {
+          display: flex;
+          width: 100%;
+          justify-content: space-around;
+          align-items: center;
+
+          .MuiButtonBase-root {
+            background: #00000040;
+            border: 1px solid #d9d9d940;
+
+            .MuiTouchRipple-root {
+              color: #50318a;
+            }
+
+            &.small {
+              width: 64px;
+              height: 64px;
+            }
+
+            &.large {
+              width: 96px;
+              height: 96px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
