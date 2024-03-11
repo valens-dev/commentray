@@ -9,10 +9,8 @@ import eraseIcon from "@assets/x-icon.svg";
 import giftButtonIcon from "@assets/gift-button-icon.svg";
 import emoticonButtonIcon from "@assets/emoticon-button-icon.svg";
 import alertIcon from "@assets/alert-info-icon.svg";
-import commenter1 from "@assets/commenter-1.png";
-import commenter2 from "@assets/commenter-2.png";
-import commenter3 from "@assets/commenter-3.png";
-import commenter4 from "@assets/commenter-4.png";
+import comments from "../../data/comments";
+import CommentBubble from "./../CommentBubble";
 
 const StreamChat = () => (
   <div className="sc-container">
@@ -54,65 +52,18 @@ const StreamChat = () => (
               </IconButton>
             </div>
           </div>
-          <div className="sc-comment-bubble">
-            <div className="commenter-icon">
-              <img src={commenter1} alt="commenter 1" />
-            </div>
-            <div className="comment-main-section">
-              <div className="comment-main-upper">
-                <div className="commenter-name">Jane Cooper</div>
-                <div className="comment-time">12:45</div>
-              </div>
-              <div className="comment-message">
-                Rashford!!!!! *Chefs kiss* 🤌😘
-              </div>
-            </div>
-          </div>
-          <div className="sc-comment-bubble">
-            <div className="commenter-icon">
-              <img src={commenter2} alt="commenter 2" />
-            </div>
-            <div className="comment-main-section">
-              <div className="comment-main-upper">
-                <div className="commenter-name">Wade Warren</div>
-                <div className="comment-time">12:45</div>
-              </div>
-              <div className="comment-message">GOALLLLL</div>
-            </div>
-          </div>
-          <div className="sc-comment-bubble">
-            <div className="commenter-icon">
-              <img src={commenter3} alt="commenter 3" />
-            </div>
-            <div className="comment-main-section">
-              <div className="comment-main-upper">
-                <div className="commenter-name">Jenny Wilson</div>
-                <div className="comment-time">12:45</div>
-              </div>
-              <div className="comment-message">
-                Best game of football this year. Nice one lads!
-              </div>
-            </div>
-          </div>
-          <div className="sc-comment-separator">
-            <div className="sc-separator-text">New</div>
-            <div className="sc-separator-line" />
-          </div>
-          <div className="sc-comment-bubble">
-            <div className="commenter-icon">
-              <img src={commenter4} alt="commenter 4" />
-            </div>
-            <div className="comment-main-section">
-              <div className="comment-main-upper">
-                <div className="commenter-name">Savannah Nguyen</div>
-                <div className="comment-time">12:45</div>
-              </div>
-              <div className="comment-message">
-                You guys are hilarious, I love how stressed Kevin is getting.
-                That man loves his football.
-              </div>
-            </div>
-          </div>
+
+          {comments.map((comment, index) => (
+            <>
+              {comment.isNew ? (
+                <div className="sc-comment-separator">
+                  <div className="sc-separator-text">New</div>
+                  <div className="sc-separator-line" />
+                </div>
+              ) : null}
+              <CommentBubble key={index} comment={comment} />
+            </>
+          ))}
         </div>
         <div className="sc-message-input">
           <div className="input-notification">

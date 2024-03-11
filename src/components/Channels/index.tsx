@@ -3,7 +3,7 @@ import "../Toggle/styles.scss";
 import Toggle from "../Toggle";
 import IconButton from "@mui/material/IconButton";
 import filterIcon from "@assets/filter-streams-icon.svg";
-import ChannelList from "../../data/users";
+import channelList from "../../data/users";
 import StreamerCard from "./../StreamerCard";
 
 const Channels = () => (
@@ -24,7 +24,7 @@ const Channels = () => (
     <div className="ch-list">
       <div className="ch-list-inner-container">
         <div className="ch-streamers">
-          {ChannelList.map((streamer, index) => (
+          {channelList.map((streamer, index) => (
             <StreamerCard key={index} streamer={streamer} />
           ))}
         </div>

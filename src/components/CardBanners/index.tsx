@@ -1,9 +1,9 @@
 import "./styles.scss";
-import CardBannersList from "../../data/images";
+import cardBannersList from "../../data/images";
 
 const CardBanners = () => (
   <div className="stream-banners">
-    {CardBannersList.map((bannerUrl, index) => (
+    {cardBannersList.map((bannerUrl, index) => (
       <img
         key={bannerUrl}
         src={bannerUrl}

@@ -8,7 +8,7 @@ import banner7 from "./../assets/card-banner7.png";
 import banner8 from "./../assets/card-banner8.png";
 import banner9 from "./../assets/card-banner9.png";
 
-const CardBannersList: string[] = [
+const cardBannersList: string[] = [
   banner1,
   banner2,
   banner3,
@@ -20,4 +20,4 @@ const CardBannersList: string[] = [
   banner9,
 ];
 
-export default CardBannersList;
+export default cardBannersList;
