@@ -10,3 +10,7 @@ export interface User {
 export interface StreamerCardProps {
   streamer: User;
 }
+
+export interface StreamerCardProps {
+  streamer: User;
+}
