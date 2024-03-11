@@ -12,7 +12,7 @@ const Toggle = () => {
         <Box
           className="mask"
           style={{
-            transform: `translateX(${subType === "live" ? 0 : "130px"})`
+            transform: `translateX(${subType === "live" ? 0 : "130px"})`,
           }}
         />
         <Button
@@ -34,6 +34,6 @@ const Toggle = () => {
       </Box>
     </Box>
   );
-}
+};
 
 export default Toggle;

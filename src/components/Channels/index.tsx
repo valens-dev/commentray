@@ -1,8 +1,8 @@
-import "./styles.scss"
-import "../Toggle/styles.scss"
-import Toggle from '../Toggle';
-import IconButton from '@mui/material/IconButton';
-import filterIcon from "./../../assets/filter-streams-icon.svg";
+import "./styles.scss";
+import "../Toggle/styles.scss";
+import Toggle from "../Toggle";
+import IconButton from "@mui/material/IconButton";
+import filterIcon from "@assets/filter-streams-icon.svg";
 import ChannelList from "../../data/users";
 import StreamerCard from "./../StreamerCard";
 
@@ -31,7 +31,6 @@ const Channels = () => (
       </div>
     </div>
   </div>
-)
-
+);
 
 export default Channels;

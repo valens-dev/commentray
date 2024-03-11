@@ -2,7 +2,7 @@ import StreamRadio from "../StreamRadio";
 import CardBanners from "../CardBanners";
 import Channels from "../Channels";
 import NavigationButtons from "../NavigationButtons";
-import "./styles.scss"
+import "./styles.scss";
 import StreamChat from "../StreamChat";
 
 const Home = () => (
@@ -15,7 +15,6 @@ const Home = () => (
       <StreamChat />
     </div>
   </>
-)
-
+);
 
 export default Home;

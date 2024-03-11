@@ -1,5 +1,5 @@
-import "./styles.scss"
-import { Button } from '@mui/material';
+import "./styles.scss";
+import { Button } from "@mui/material";
 
 const NavigationButtons = () => (
   <div className="navigation-buttons">
@@ -9,6 +9,6 @@ const NavigationButtons = () => (
     <Button variant="contained">Celebrity CommenTray</Button>
     <Button variant="contained">Place your bet</Button>
   </div>
-)
+);
 
 export default NavigationButtons;
