@@ -25,3 +25,4 @@ export interface Comment {
 export interface CommentProps {
   comment: Comment;
 }
+
