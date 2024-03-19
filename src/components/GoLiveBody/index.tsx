@@ -1,3 +1,4 @@
+import "./styles.scss";
 import {
   Button,
   Checkbox,
@@ -9,17 +10,18 @@ import {
   InputAdornment,
   TextField,
 } from "@mui/material";
-import SearchBox from "../SearchBox";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
-import "./styles.scss";
-import { useState } from "react";
-import { Category } from "../../data/interfaces";
-import categories from "../../data/categories";
-import VideocamIcon from "@mui/icons-material/VideocamOutlined";
-import MicNoneIcon from "@mui/icons-material/MicNone";
 import SearchIcon from "@mui/icons-material/Search";
 import ScheduleIcon from "@mui/icons-material/Schedule";
+import mediator1 from "@assets/mediator-1.png";
+import mediator2 from "@assets/mediator-2.png";
+import mediator3 from "@assets/mediator-3.png";
+import { useState } from "react";
+import { Category } from "../../data/interfaces";
+import SearchBox from "../SearchBox";
+import ToggleButtons from "../ToggleButtons";
+import categories from "../../data/categories";
 
 interface Filter extends Category {
   isActive: boolean;
@@ -34,33 +36,6 @@ const GoLiveBody = () => {
     filter.isActive = !filter.isActive;
     const newFilters = [...allFilters];
     setAllFilters(newFilters);
-  };
-
-  const ToggleButtons = () => {
-    const [isSendContained, setIsSendContained] = useState(false);
-
-    const handleToggle = () => {
-      setIsSendContained((prevState) => !prevState);
-    };
-
-    return (
-      <>
-        <Button
-          variant={isSendContained ? "outlined" : "contained"}
-          startIcon={<VideocamIcon />}
-          onClick={handleToggle}
-        >
-          Enable Video
-        </Button>
-        <Button
-          variant={isSendContained ? "contained" : "outlined"}
-          endIcon={<MicNoneIcon />}
-          onClick={handleToggle}
-        >
-          Audio Only
-        </Button>
-      </>
-    );
   };
 
   return (
@@ -112,19 +87,20 @@ const GoLiveBody = () => {
                 variant="outlined"
                 InputProps={{
                   endAdornment: (
-                    <>
-                      <InputAdornment position="end">
-                        <IconButton>
-                          <SearchIcon />
-                        </IconButton>
-                      </InputAdornment>
-                    </>
+                    <InputAdornment position="end">
+                      <IconButton>
+                        <SearchIcon />
+                      </IconButton>
+                    </InputAdornment>
                   ),
                 }}
               />
             </div>
-            <div className="selected-mediators"></div>
-
+            <div className="selected-mediators">
+              <img src={mediator1} alt="mediator 1" />
+              <img src={mediator2} alt="mediator 2" />
+              <img src={mediator3} alt="mediator 3" />
+            </div>
             <div className="censor-title">Block words from chat:</div>
             <div className="censor-input">
               <TextField
@@ -145,13 +121,11 @@ const GoLiveBody = () => {
                 variant="outlined"
                 InputProps={{
                   endAdornment: (
-                    <>
-                      <InputAdornment position="end">
-                        <IconButton>
-                          <ScheduleIcon />
-                        </IconButton>
-                      </InputAdornment>
-                    </>
+                    <InputAdornment position="end">
+                      <IconButton>
+                        <ScheduleIcon />
+                      </IconButton>
+                    </InputAdornment>
                   ),
                 }}
               />
