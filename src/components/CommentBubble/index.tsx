@@ -1,7 +1,7 @@
 import "./styles.scss";
-import { CommentProps } from "../../data/interfaces";
+import { ChatMessageProps } from "../../data/interfaces";
 
-const CommentBubble = ({ comment }: CommentProps) => (
+const ChatMessage = ({ comment }: ChatMessageProps) => (
   <>
     <div className="sc-comment-bubble">
       <div className="commenter-icon">
@@ -18,4 +18,4 @@ const CommentBubble = ({ comment }: CommentProps) => (
   </>
 );
 
-export default CommentBubble;
+export default ChatMessage;
