@@ -1,7 +1,7 @@
 import { Autocomplete, TextField, Stack, InputAdornment } from "@mui/material";
 
-import filtersIcon from "./../../assets/filters-icon.svg";
-import searchIcon from "./../../assets/search-icon.svg";
+import filtersIcon from "@assets/filters-icon.svg";
+import searchIcon from "@assets/search-icon.svg";
 
 const SearchBox = () => (
   <Stack spacing={2} sx={{ width: 300 }}>
@@ -32,7 +32,6 @@ const SearchBox = () => (
       )}
     />
   </Stack>
-)
-
+);
 
 export default SearchBox;

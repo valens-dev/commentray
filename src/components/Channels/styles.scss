@@ -14,6 +14,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 25px;
+    height: 50px;
 
     .ch-title {
       font-weight: 600;
@@ -43,7 +44,7 @@
 
   .ch-list {
     display: flex;
-    height: fit-content;
+    height: 480px;
     padding: 20px 40px 20px 28px;
     background-color: $primary-color;
     font-family: $font-family;

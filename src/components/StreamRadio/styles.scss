@@ -9,7 +9,7 @@
   font-family: $font-family;
 
   .lt-head {
-    height: 64px;
+    height: 50px;
     display: flex;
     align-items: center;
     padding-bottom: 25px;
@@ -23,7 +23,7 @@
   .lt-stream {
     background-color: $primary-color;
     font-family: $font-family;
-    height: 100%;
+    height: 470px;
     padding: 30px 20px 20px 20px;
 
     .lt-inner-container {
@@ -46,8 +46,8 @@
           display: flex;
           position: absolute;
           gap: 8px;
-          top: 12px;
-          right: 50px;
+          top: 10px;
+          right: 30px;
 
           >.MuiButtonBase-root {
             height: 48px;

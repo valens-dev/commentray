@@ -1,8 +1,8 @@
 import { Button } from "@mui/material";
 
 import "./styles.scss";
-import companyLogo from "./../../assets/header-logo.svg";
-import profilePicture from "./../../assets/profile.png";
+import companyLogo from "@assets/header-logo.svg";
+import profilePicture from "@assets/profile.png";
 import SearchBox from "../SearchBox";
 import HamburgerMenu from "../HamburgerMenu";
 
@@ -44,6 +44,6 @@ const Header = () => (
       </div>
     </div>
   </div>
-)
+);
 
 export default Header;

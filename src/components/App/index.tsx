@@ -9,6 +9,6 @@ const App = () => (
       <Route path="/" element={<Home />} />
     </Routes>
   </>
-)
+);
 
 export default App;
