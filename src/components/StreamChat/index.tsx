@@ -10,7 +10,8 @@ import giftButtonIcon from "@assets/gift-button-icon.svg";
 import emoticonButtonIcon from "@assets/emoticon-button-icon.svg";
 import alertIcon from "@assets/alert-info-icon.svg";
 import comments from "../../data/comments";
-import CommentBubble from "./../CommentBubble";
+import ChatMessage from "../ChatMessage";
+import { Fragment } from "react/jsx-runtime";
 
 const StreamChat = () => (
   <div className="sc-container">
@@ -53,17 +54,19 @@ const StreamChat = () => (
             </div>
           </div>
 
-          {comments.map((comment, index) => (
-            <>
-              {comment.isNew ? (
+          {comments.map((comment) =>
+            comment.isNew ? (
+              <Fragment key={comment.id}>
                 <div className="sc-comment-separator">
                   <div className="sc-separator-text">New</div>
                   <div className="sc-separator-line" />
                 </div>
-              ) : null}
-              <CommentBubble key={index} comment={comment} />
-            </>
-          ))}
+                <ChatMessage comment={comment} />
+              </Fragment>
+            ) : (
+              <ChatMessage key={comment.id} comment={comment} />
+            )
+          )}
         </div>
         <div className="sc-message-input">
           <div className="input-notification">

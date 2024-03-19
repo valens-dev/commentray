@@ -22,7 +22,7 @@ export interface Comment {
   isNew: boolean;
 }
 
-export interface CommentProps {
+export interface ChatMessageProps {
   comment: Comment;
 }
 
