@@ -22,7 +22,7 @@ export interface Comment {
   isNew: boolean;
 }
 
-export interface CommentProps {
+export interface ChatMessageProps {
   comment: Comment;
 }
 
@@ -38,3 +38,15 @@ export interface Stream {
   url: string;
   categories: Category[];
 }
+
+export interface Comment {
+  id: number;
+  commenter: {
+    name: string;
+    image: string;
+  };
+  content: string;
+  timeStamp: string;
+  isNew: boolean;
+}
+
