@@ -1,0 +1,251 @@
+@import "./../../styles/variables";
+
+.go-live-body {
+  display: flex;
+  justify-content: center;
+  height: 900px;
+  margin: 34px 24px;
+  font-family: $font-family;
+  color: $font-primary-color;
+
+  .go-live-section {
+    background-color: #221d28;
+    width: 100%;
+    max-height: 842px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .box-title-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: fit-content;
+      padding-bottom: 32px;
+
+      .box-title {
+        font-size: 36px;
+        font-weight: 600;
+      }
+    }
+
+    [class$="-title"] {
+      height: 47px;
+    }
+
+    .parallel-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+      font-weight: 600;
+
+      >div {
+        display: flex;
+        flex-direction: column;
+        width: 566px;
+        gap: 16px;
+      }
+
+      .parallel-left {
+        .event-search {
+          label {
+            color: #7a777e;
+            font-weight: 200;
+          }
+
+          .MuiInputBase-root fieldset {
+            border-color: #3d3d3d;
+            border-radius: 12px;
+          }
+
+          input.MuiInputBase-input {
+            color: #7a777e;
+          }
+
+          .MuiTextField-root.MuiFormControl-root {
+            width: 100%;
+            background-color: #05010c;
+            border-radius: 12px;
+
+            >.MuiInputBase-root {
+              height: 54px;
+              padding: 0;
+
+              .MuiInputAdornment-root:nth-child(3) {
+                .MuiButtonBase-root {
+                  background-color: #221d28;
+                  border-radius: 0;
+                  padding: 0 10px;
+                  width: 70px;
+                  height: 54px;
+                }
+              }
+            }
+          }
+        }
+
+        .tags {
+          width: 500px;
+
+          .MuiDialogContent-root {
+            padding: 0;
+
+            .filter-chip {
+              background-color: $primary-color;
+              border: 1px solid #fff;
+              margin: 8px;
+              height: 40px;
+              border-radius: 20px;
+
+              &.active {
+                background-color: #6441a5;
+              }
+
+              span.MuiChip-label {
+                color: $font-primary-color;
+              }
+
+              svg {
+                color: $font-primary-color;
+
+                &:hover {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+
+        .type-toggle {
+          display: flex;
+          justify-content: space-between;
+          width: 99%;
+          height: 101px;
+          padding: 0 6px;
+          gap: 16px;
+
+          .MuiButtonBase-root {
+            width: 269px;
+            display: flex;
+            flex-direction: column;
+            color: $font-primary-color;
+            border: 2px solid #7a777e;
+
+            &.MuiButton-contained {
+              background-color: #6441a5;
+            }
+
+            &:nth-child(2) {
+              flex-direction: column-reverse;
+            }
+
+            .MuiButton-icon {
+              margin: 0;
+
+              >svg {
+                width: 32px;
+                height: 32px;
+              }
+            }
+          }
+        }
+      }
+
+      .parallel-right {
+
+        .mediator-search,
+        .censor-input {
+          .MuiFormControl-root {
+            width: 100%;
+            background-color: #05010c;
+            border-radius: 12px;
+
+            label {
+              color: #7a777e;
+              font-weight: 200;
+            }
+
+            .MuiInputBase-root fieldset {
+              border-color: #3d3d3d;
+              border-radius: 12px;
+            }
+
+            input.MuiInputBase-input {
+              color: #7a777e;
+            }
+
+            .MuiInputBase-root {
+              .MuiInputAdornment-root {
+                .MuiButtonBase-root {
+                  width: 70px;
+                  padding: 0 10px;
+                  margin-right: -14px;
+                  background-color: #221d28;
+                  border-radius: 0;
+
+                  svg {
+                    color: $font-primary-color;
+                    height: 55px;
+                    width: 33px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .censored-words-list {
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .censored-words-subtext {
+          font-size: 14px;
+          font-weight: 400;
+          color: #7a777e;
+        }
+
+        .time-input {
+          .MuiFormControl-root {
+            background-color: #05010c;
+            border-radius: 12px;
+
+            .MuiInputBase-root fieldset {
+              border-color: #3d3d3d;
+              border-radius: 12px;
+            }
+
+            label,
+            svg {
+              color: #7a777e;
+            }
+          }
+        }
+
+        .go-live-checkboxes {
+          svg {
+            color: $font-primary-color;
+          }
+        }
+      }
+    }
+
+    .go-live-button {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        width: 566px;
+        height: 67px;
+        background-color: #0049ff;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

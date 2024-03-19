@@ -26,3 +26,15 @@ export interface CommentProps {
   comment: Comment;
 }
 
+export interface Category {
+  id: number;
+  name: string;
+}
+
+export interface Stream {
+  id: number;
+  name: string;
+  image: string;
+  url: string;
+  categories: Category[];
+}

@@ -32,17 +32,20 @@
     div.MuiInputBase-root {
       background-color: #05010c;
       border-radius: 9px;
+      padding-right: 0;
     }
 
     .filter-button {
       width: 30px;
       height: 39px;
+      margin-right: -10px;
     }
 
     .search-button {
       width: 22px;
       height: 39px;
       padding: 0 14px;
+      margin-right: -7px;
       background-color: $primary-color;
     }
   }
@@ -81,9 +84,6 @@
   }
 
   .header-search-box {
-    .css-fedopx-MuiStack-root {
-      width: 362px;
-    }
 
     label#search-box-label {
       color: #7a777e;
@@ -99,7 +99,9 @@
       color: #7a777e;
     }
 
-    .MuiAutocomplete-root .MuiFormControl-root {
+    .MuiTextField-root.MuiFormControl-root {
+      width: 392px;
+
       label#search-box {
         padding: 0 5px;
         color: #7a777e;

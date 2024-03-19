@@ -11,6 +11,7 @@ import emoticonButtonIcon from "@assets/emoticon-button-icon.svg";
 import alertIcon from "@assets/alert-info-icon.svg";
 import comments from "../../data/comments";
 import CommentBubble from "./../CommentBubble";
+import { Fragment } from "react/jsx-runtime";
 
 const StreamChat = () => (
   <div className="sc-container">
@@ -53,16 +54,16 @@ const StreamChat = () => (
             </div>
           </div>
 
-          {comments.map((comment, index) => (
-            <>
+          {comments.map((comment) => (
+            <Fragment key={comment.id}>
               {comment.isNew ? (
                 <div className="sc-comment-separator">
                   <div className="sc-separator-text">New</div>
                   <div className="sc-separator-line" />
                 </div>
               ) : null}
-              <CommentBubble key={index} comment={comment} />
-            </>
+              <CommentBubble key={comment.id} comment={comment} />
+            </Fragment>
           ))}
         </div>
         <div className="sc-message-input">
