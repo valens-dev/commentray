@@ -31,6 +31,15 @@ export interface Category {
   name: string;
 }
 
+export interface Filter extends Category {
+  isActive: boolean;
+}
+
+export interface FiltersDialogProps {
+  open: boolean;
+  onClose: () => void;
+}
+
 export interface Stream {
   id: number;
   name: string;
@@ -38,15 +47,3 @@ export interface Stream {
   url: string;
   categories: Category[];
 }
-
-export interface Comment {
-  id: number;
-  commenter: {
-    name: string;
-    image: string;
-  };
-  content: string;
-  timeStamp: string;
-  isNew: boolean;
-}
-

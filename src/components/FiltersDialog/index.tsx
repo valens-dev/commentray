@@ -1,3 +1,4 @@
+import "./styles.scss";
 import {
   Dialog,
   DialogTitle,
@@ -10,36 +11,25 @@ import {
   Checkbox,
 } from "@mui/material";
 import { FC, useState } from "react";
-
-import "./styles.scss";
+import { Filter, FiltersDialogProps } from "../../data/interfaces";
+import { useFilters } from "../../contexts/FilterContext";
 import closeButton from "@assets/close-button.svg";
-import categories from "../../data/categories";
-import types from "../../data/types";
-import sorts from "../../data/sorts";
+import streamCategories from "../../data/streamCategories";
+import streamTypes from "../../data/streamTypes";
+import streamSorts from "../../data/streamSorts";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
-import { Category } from "../../data/interfaces";
-import { useFilters } from "../../contexts/FilterContext";
-
-interface FiltersDialogProps {
-  open: boolean;
-  onClose: () => void;
-}
-
-interface Filter extends Category {
-  isActive: boolean;
-}
 
 const FiltersDialog: FC<FiltersDialogProps> = ({ open, onClose }) => {
   const { setFilters } = useFilters();
   const [allFilters, setAllFilters] = useState<Filter[]>(
-    categories as Filter[]
+    streamCategories as Filter[]
   );
   const [allTypeFilters, setAllTypeFilters] = useState<Filter[]>(
-    types as Filter[]
+    streamTypes as Filter[]
   );
   const [allSortFilters, setAllSortFilters] = useState<Filter[]>(
-    sorts as Filter[]
+    streamSorts as Filter[]
   );
   const [checkboxActive, setCheckboxActive] = useState(false);
 
@@ -47,24 +37,29 @@ const FiltersDialog: FC<FiltersDialogProps> = ({ open, onClose }) => {
     setCheckboxActive((oldState) => !oldState);
   };
 
-  const chipClicked = (filter: Filter) => {
-    filter.isActive = !filter.isActive;
-    const newFilters = [...allFilters];
-    const newTypeFilters = [...allTypeFilters];
-    const newSortFilters = [...allSortFilters];
-    setAllFilters(newFilters);
-    setAllTypeFilters(newTypeFilters);
-    setAllSortFilters(newSortFilters);
+  const chipClicked = (
+    filter: Filter,
+    filterArray: Filter[],
+    setFilterArray: Function
+  ) => {
+    const updatedFilters = filterArray.map((f) =>
+      f.id === filter.id ? { ...f, isActive: !f.isActive } : f
+    );
+    setFilterArray(updatedFilters);
   };
 
   const applyFilters = () => {
-    const activeCategories = allFilters.filter((filter) => filter.isActive);
-    const activeTypes = allTypeFilters.filter((filter) => filter.isActive);
-    const activeSorts = allSortFilters.filter((filter) => filter.isActive);
-    setFilters(activeCategories);
-    setAllTypeFilters(activeTypes);
-    setAllSortFilters(activeSorts);
+    const activeFilters = (filterArray: Filter[]) =>
+      filterArray.filter((filter) => filter.isActive);
+    const mergedFilters = [
+      ...activeFilters(allFilters),
+      ...activeFilters(allTypeFilters),
+      ...activeFilters(allSortFilters),
+    ];
+    setFilters(mergedFilters);
     onClose();
+
+    console.log("merged filters: ", mergedFilters);
   };
 
   const lastElementIndex = !!allTypeFilters.length
@@ -90,7 +85,7 @@ const FiltersDialog: FC<FiltersDialogProps> = ({ open, onClose }) => {
             key={filter.id}
             className={`filter-chip ${filter.isActive ? "active" : ""}`}
             label={filter.name}
-            onClick={() => chipClicked(filter)}
+            onClick={() => chipClicked(filter, allFilters, setAllFilters)}
             onDelete={() => {}}
             deleteIcon={
               filter.isActive ? <CheckRoundedIcon /> : <AddRoundedIcon />
@@ -105,7 +100,9 @@ const FiltersDialog: FC<FiltersDialogProps> = ({ open, onClose }) => {
             key={filter.id}
             className={`filter-chip ${filter.isActive ? "active" : ""}`}
             label={filter.name}
-            onClick={() => chipClicked(filter)}
+            onClick={() =>
+              chipClicked(filter, allTypeFilters, setAllTypeFilters)
+            }
             onDelete={() => {}}
             deleteIcon={
               filter.isActive ? <CheckRoundedIcon /> : <AddRoundedIcon />
@@ -133,7 +130,9 @@ const FiltersDialog: FC<FiltersDialogProps> = ({ open, onClose }) => {
             key={filter.id}
             className={`filter-chip ${filter.isActive ? "active" : ""}`}
             label={filter.name}
-            onClick={() => chipClicked(filter)}
+            onClick={() =>
+              chipClicked(filter, allSortFilters, setAllSortFilters)
+            }
             onDelete={() => {}}
             deleteIcon={
               filter.isActive ? <CheckRoundedIcon /> : <AddRoundedIcon />

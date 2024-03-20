@@ -21,7 +21,7 @@ import { useState } from "react";
 import { Category } from "../../data/interfaces";
 import SearchBox from "../SearchBox";
 import ToggleButtons from "../ToggleButtons";
-import categories from "../../data/categories";
+import categories from "../../data/streamCategories";
 
 interface Filter extends Category {
   isActive: boolean;

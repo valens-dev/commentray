@@ -9,7 +9,7 @@
   color: $font-primary-color;
 
   .go-live-section {
-    background-color: #221d28;
+    background-color: $primary-color;
     width: 100%;
     max-height: 842px;
     padding: 32px;
@@ -52,22 +52,22 @@
       .parallel-left {
         .event-search {
           label {
-            color: #7a777e;
+            color: $input-primary-color;
             font-weight: 200;
           }
 
           .MuiInputBase-root fieldset {
-            border-color: #3d3d3d;
+            border-color: $border-primary-color;
             border-radius: 12px;
           }
 
           input.MuiInputBase-input {
-            color: #7a777e;
+            color: $input-primary-color;
           }
 
           .MuiTextField-root.MuiFormControl-root {
             width: 100%;
-            background-color: #05010c;
+            background-color: $background-primary-color;
             border-radius: 12px;
 
             > .MuiInputBase-root {
@@ -76,7 +76,7 @@
 
               .MuiInputAdornment-root:nth-child(3) {
                 .MuiButtonBase-root {
-                  background-color: #221d28;
+                  background-color: $primary-color;
                   border-radius: 0;
                   padding: 0 10px;
                   width: 70px;
@@ -101,7 +101,7 @@
               border-radius: 20px;
 
               &.active {
-                background-color: #6441a5;
+                background-color: $background-secondary-color;
               }
 
               span.MuiChip-label {
@@ -112,7 +112,7 @@
                 color: $font-primary-color;
 
                 &:hover {
-                  color: #fff;
+                  color: $font-primary-color;
                 }
               }
             }
@@ -125,21 +125,21 @@
         .censor-input {
           .MuiFormControl-root {
             width: 100%;
-            background-color: #05010c;
+            background-color: $background-primary-color;
             border-radius: 12px;
 
             label {
-              color: #7a777e;
+              color: $input-primary-color;
               font-weight: 200;
             }
 
             .MuiInputBase-root fieldset {
-              border-color: #3d3d3d;
+              border-color: $border-primary-color;
               border-radius: 12px;
             }
 
             input.MuiInputBase-input {
-              color: #7a777e;
+              color: $input-primary-color;
             }
 
             .MuiInputBase-root {
@@ -148,7 +148,7 @@
                   width: 70px;
                   padding: 0 10px;
                   margin-right: -14px;
-                  background-color: #221d28;
+                  background-color: $primary-color;
                   border-radius: 0;
 
                   svg {
@@ -181,22 +181,22 @@
         .censored-words-subtext {
           font-size: 14px;
           font-weight: 400;
-          color: #7a777e;
+          color: $input-primary-color;
         }
 
         .time-input {
           .MuiFormControl-root {
-            background-color: #05010c;
+            background-color: $background-primary-color;
             border-radius: 12px;
 
             .MuiInputBase-root fieldset {
-              border-color: #3d3d3d;
+              border-color: $border-primary-color;
               border-radius: 12px;
             }
 
             label,
             svg {
-              color: #7a777e;
+              color: $input-primary-color;
             }
           }
         }
@@ -219,7 +219,7 @@
       button {
         width: 566px;
         height: 67px;
-        background-color: #0049ff;
+        background-color: $button-background-strong;
         font-size: 18px;
         text-transform: capitalize;
       }

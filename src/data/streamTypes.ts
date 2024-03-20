@@ -1,6 +1,6 @@
 import { Category } from "./interfaces";
 
-const types: Category[] = [
+const streamTypes: Category[] = [
   {
     id: 1,
     name: "Enable Video",
@@ -15,4 +15,4 @@ const types: Category[] = [
   },
 ];
 
-export default types;
+export default streamTypes;

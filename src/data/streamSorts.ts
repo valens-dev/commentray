@@ -1,6 +1,6 @@
 import { Category } from "./interfaces";
 
-const sorts: Category[] = [
+const streamSorts: Category[] = [
   {
     id: 1,
     name: "Newest",
@@ -19,4 +19,4 @@ const sorts: Category[] = [
   },
 ];
 
-export default sorts;
+export default streamSorts;

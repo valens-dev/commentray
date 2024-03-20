@@ -8,7 +8,7 @@ const ToggleButtons = () => {
   const [isSendContained, setIsSendContained] = useState(false);
 
   const handleToggle = () => {
-    setIsSendContained((prevState) => !prevState);
+    setIsSendContained(! isSendContained)
   };
 
   return (

@@ -1,6 +1,6 @@
 import { Category } from "./interfaces";
 
-const categories: Category[] = [
+const streamCategories: Category[] = [
   {
     id: 1,
     name: "Funny",
@@ -31,4 +31,4 @@ const categories: Category[] = [
   },
 ];
 
-export default categories;
+export default streamCategories;

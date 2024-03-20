@@ -1,5 +1,5 @@
 import { Stream } from "./interfaces";
-import categories from "./categories";
+import categories from "./streamCategories";
 
 import image1 from "./../assets/stream-thumbnail-1.png";
 import image2 from "./../assets/stream-thumbnail-2.png";

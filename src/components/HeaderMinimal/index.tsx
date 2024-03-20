@@ -5,7 +5,7 @@ const HeaderMinimal = () => {
   return (
     <div className="header-minimal">
       <div className="header-logo-container">
-        <a className="header-logo-link" href="https://www.google.com/">
+        <a className="header-logo-link" href="/">
           <img src={companyLogo} />
         </a>
       </div>

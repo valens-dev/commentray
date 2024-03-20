@@ -6,14 +6,14 @@
   .mask-box {
     border-radius: 9px;
     position: relative;
-    background: $primary-color;
+    background-color: $primary-color;
   }
 
   .mask-box .mask {
     width: 130px;
     height: 100%;
     border-radius: 9px;
-    background: #0049ff;
+    background-color: $button-background-strong;
     position: absolute;
     transition: all 0.5s ease;
   }
