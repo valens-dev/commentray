@@ -1,0 +1,228 @@
+@import "./../../styles/variables";
+
+.go-live-body {
+  display: flex;
+  justify-content: center;
+  height: 900px;
+  margin: 34px 24px;
+  font-family: $font-family;
+  color: $font-primary-color;
+
+  .go-live-section {
+    background-color: $primary-color;
+    width: 100%;
+    max-height: 842px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .box-title-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: fit-content;
+      padding-bottom: 32px;
+
+      .box-title {
+        font-size: 36px;
+        font-weight: 600;
+      }
+    }
+
+    [class$="-title"] {
+      height: 47px;
+    }
+
+    .parallel-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+      font-weight: 600;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        width: 566px;
+        gap: 16px;
+      }
+
+      .parallel-left {
+        .event-search {
+          label {
+            color: $input-primary-color;
+            font-weight: 200;
+          }
+
+          .MuiInputBase-root fieldset {
+            border-color: $border-primary-color;
+            border-radius: 12px;
+          }
+
+          input.MuiInputBase-input {
+            color: $input-primary-color;
+          }
+
+          .MuiTextField-root.MuiFormControl-root {
+            width: 100%;
+            background-color: $background-primary-color;
+            border-radius: 12px;
+
+            > .MuiInputBase-root {
+              height: 54px;
+              padding: 0;
+
+              .MuiInputAdornment-root:nth-child(3) {
+                .MuiButtonBase-root {
+                  background-color: $primary-color;
+                  border-radius: 0;
+                  padding: 0 10px;
+                  width: 70px;
+                  height: 54px;
+                }
+              }
+            }
+          }
+        }
+
+        .tags {
+          width: 500px;
+
+          .MuiDialogContent-root {
+            padding: 0;
+
+            .filter-chip {
+              background-color: $primary-color;
+              border: 1px solid #fff;
+              margin: 8px;
+              height: 40px;
+              border-radius: 20px;
+
+              &.active {
+                background-color: $background-secondary-color;
+              }
+
+              span.MuiChip-label {
+                color: $font-primary-color;
+              }
+
+              svg {
+                color: $font-primary-color;
+
+                &:hover {
+                  color: $font-primary-color;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .parallel-right {
+        .mediator-search,
+        .censor-input {
+          .MuiFormControl-root {
+            width: 100%;
+            background-color: $background-primary-color;
+            border-radius: 12px;
+
+            label {
+              color: $input-primary-color;
+              font-weight: 200;
+            }
+
+            .MuiInputBase-root fieldset {
+              border-color: $border-primary-color;
+              border-radius: 12px;
+            }
+
+            input.MuiInputBase-input {
+              color: $input-primary-color;
+            }
+
+            .MuiInputBase-root {
+              .MuiInputAdornment-root {
+                .MuiButtonBase-root {
+                  width: 70px;
+                  padding: 0 10px;
+                  margin-right: -14px;
+                  background-color: $primary-color;
+                  border-radius: 0;
+
+                  svg {
+                    color: $font-primary-color;
+                    height: 55px;
+                    width: 33px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .selected-mediators {
+          display: flex;
+          gap: 15px;
+          height: 52px;
+          width: fit-content;
+
+          img {
+            height: 52px;
+          }
+        }
+
+        .censored-words-list {
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .censored-words-subtext {
+          font-size: 14px;
+          font-weight: 400;
+          color: $input-primary-color;
+        }
+
+        .time-input {
+          .MuiFormControl-root {
+            background-color: $background-primary-color;
+            border-radius: 12px;
+
+            .MuiInputBase-root fieldset {
+              border-color: $border-primary-color;
+              border-radius: 12px;
+            }
+
+            label,
+            svg {
+              color: $input-primary-color;
+            }
+          }
+        }
+
+        .go-live-checkboxes {
+          svg {
+            color: $font-primary-color;
+          }
+        }
+      }
+    }
+
+    .go-live-button {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        width: 566px;
+        height: 67px;
+        background-color: $button-background-strong;
+        font-size: 18px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

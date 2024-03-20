@@ -26,3 +26,24 @@ export interface ChatMessageProps {
   comment: Comment;
 }
 
+export interface Category {
+  id: number;
+  name: string;
+}
+
+export interface Filter extends Category {
+  isActive: boolean;
+}
+
+export interface FiltersDialogProps {
+  open: boolean;
+  onClose: () => void;
+}
+
+export interface Stream {
+  id: number;
+  name: string;
+  image: string;
+  url: string;
+  categories: Category[];
+}

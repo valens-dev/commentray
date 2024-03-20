@@ -54,19 +54,17 @@ const StreamChat = () => (
             </div>
           </div>
 
-          {comments.map((comment) =>
-            comment.isNew ? (
-              <Fragment key={comment.id}>
+          {comments.map((comment) => (
+            <Fragment key={comment.id}>
+              {comment.isNew && (
                 <div className="sc-comment-separator">
                   <div className="sc-separator-text">New</div>
                   <div className="sc-separator-line" />
                 </div>
-                <ChatMessage comment={comment} />
-              </Fragment>
-            ) : (
-              <ChatMessage key={comment.id} comment={comment} />
-            )
-          )}
+              )}
+              <ChatMessage comment={comment} />
+            </Fragment>
+          ))}
         </div>
         <div className="sc-message-input">
           <div className="input-notification">

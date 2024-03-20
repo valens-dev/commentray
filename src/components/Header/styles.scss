@@ -17,7 +17,7 @@
 
   .followed-link {
     text-decoration: none;
-    color: #fff;
+    color: $font-primary-color;
     font-size: 18px;
     font-weight: 600;
   }
@@ -30,19 +30,22 @@
     display: flex;
 
     div.MuiInputBase-root {
-      background-color: #05010c;
+      background-color: $background-primary-color;
       border-radius: 9px;
+      padding-right: 0;
     }
 
     .filter-button {
       width: 30px;
       height: 39px;
+      margin-right: -10px;
     }
 
     .search-button {
       width: 22px;
       height: 39px;
       padding: 0 14px;
+      margin-right: -7px;
       background-color: $primary-color;
     }
   }
@@ -70,9 +73,9 @@
     height: 67px;
     width: 162px;
     box-shadow: none;
-    background-color: #0049ff;
+    background-color: $button-background-strong;
     text-transform: none;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
   }
 
@@ -81,32 +84,30 @@
   }
 
   .header-search-box {
-    .css-fedopx-MuiStack-root {
-      width: 362px;
-    }
-
     label#search-box-label {
-      color: #7a777e;
+      color: $input-primary-color;
       font-weight: 200;
       top: -8px;
     }
 
     .MuiInputBase-root fieldset {
-      border-color: #3d3d3d;
+      border-color: $border-primary-color;
     }
 
     input.MuiInputBase-input {
-      color: #7a777e;
+      color: $input-primary-color;
     }
 
-    .MuiAutocomplete-root .MuiFormControl-root {
+    .MuiTextField-root.MuiFormControl-root {
+      width: 392px;
+
       label#search-box {
         padding: 0 5px;
-        color: #7a777e;
-        background-color: #05010c;
+        color: $input-primary-color;
+        background-color: $background-primary-color;
       }
 
-      >.MuiInputBase-root {
+      > .MuiInputBase-root {
         height: 40px;
         padding: 0;
       }
