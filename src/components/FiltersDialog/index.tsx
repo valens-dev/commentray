@@ -58,8 +58,6 @@ const FiltersDialog: FC<FiltersDialogProps> = ({ open, onClose }) => {
     ];
     setFilters(mergedFilters);
     onClose();
-
-    console.log("merged filters: ", mergedFilters);
   };
 
   const lastElementIndex = !!allTypeFilters.length
