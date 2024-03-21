@@ -1,0 +1,13 @@
+@import "./../../styles/variables";
+
+.header-minimal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 67px;
+  padding: 25px;
+  background-color: $primary-color;
+  .header-logo-link {
+    display: flex;
+  }
+}
