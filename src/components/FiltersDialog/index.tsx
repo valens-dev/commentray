@@ -48,13 +48,14 @@ const FiltersDialog: FC<FiltersDialogProps> = ({ open, onClose }) => {
     setFilterArray(updatedFilters);
   };
 
+  const filterOnlyActive = (filterArray: Filter[]) =>
+    filterArray.filter((filter) => filter.isActive);
+
   const applyFilters = () => {
-    const activeFilters = (filterArray: Filter[]) =>
-      filterArray.filter((filter) => filter.isActive);
     const mergedFilters = [
-      ...activeFilters(allFilters),
-      ...activeFilters(allTypeFilters),
-      ...activeFilters(allSortFilters),
+      ...filterOnlyActive(allFilters),
+      ...filterOnlyActive(allTypeFilters),
+      ...filterOnlyActive(allSortFilters),
     ];
     setFilters(mergedFilters);
     onClose();

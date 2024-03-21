@@ -38,7 +38,7 @@ const Header = () => {
 
       <div className="header-right-elements">
         <div className="header-live-container">
-          <Button variant="contained" onClick={() => navigate("/go-live-page")}>
+          <Button variant="contained" onClick={() => navigate("/go-live")}>
             Go Live
           </Button>
         </div>
