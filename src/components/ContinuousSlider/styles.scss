@@ -1,43 +1,46 @@
 @import "./../../styles/variables";
 
 .lt-volume-slider {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 
-    .MuiBox-root {
-        width: 345px;
+  .MuiBox-root {
+    width: 345px;
 
-        .MuiStack-root {
-            margin-bottom: 0;
-            padding-top: 6px;
-            padding-bottom: 6px;
+    .MuiStack-root {
+      margin-bottom: 0;
+      padding-top: 6px;
+      padding-bottom: 6px;
 
-            .MuiSlider-root {
-                color: $font-primary-color;
-                height: 11px;
+      .MuiSlider-root {
+        color: $font-primary-color;
+        height: 11px;
 
-                .MuiSlider-rail {
-                    height: 13px;
-                }
-
-                .MuiSlider-track {
-                    min-width: 3.2%;
-                }
-
-                .MuiSlider-thumb {
-                    display: none;
-                }
-            }
+        .MuiSlider-rail {
+          height: 13px;
         }
+
+        .MuiSlider-track {
+          min-width: 3.2%;
+        }
+
+        .MuiSlider-thumb {
+          display: none;
+        }
+      }
+      .MuiTouchRipple-root {
+        color: $button-background-soft;
+      }
     }
 
     .MuiButtonBase-root {
-        padding: 0;
-        height: 51px;
-        width: 51px;
+      padding: 0;
+      height: 51px;
+      width: 51px;
     }
 
     .MuiTouchRipple-root {
-        color: $button-background-soft;
+      color: $button-background-soft;
     }
+  }
 }

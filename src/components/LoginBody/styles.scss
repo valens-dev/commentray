@@ -1,0 +1,129 @@
+@import "./../../styles/variables";
+
+.login-body {
+  font-family: $font-family;
+  color: $font-primary-color;
+  margin: 34px 24px;
+  display: flex;
+  justify-content: center;
+
+  .login-section {
+    background-color: $primary-color;
+    width: 566px;
+    max-height: 728px;
+    padding: 32px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .box-title-wrapper {
+      width: 100%;
+      height: fit-content;
+      padding-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      > div {
+        width: inherit;
+        justify-content: center;
+      }
+
+      .box-title {
+        display: flex;
+        font-size: 36px;
+        font-weight: 600;
+      }
+
+      > [class$="-input"] {
+        .title {
+          height: 28px;
+          color: $input-primary-color;
+          font-weight: 400;
+        }
+
+        .MuiFormControl-root {
+          width: inherit;
+
+          .MuiInputBase-root {
+            height: 50px;
+            background-color: $background-primary-color;
+
+            .MuiInputAdornment-root,
+            input {
+              color: $font-primary-color;
+            }
+
+            fieldset {
+              border: none;
+            }
+          }
+        }
+      }
+
+      .login-privacy-notice,
+      .login-privacy-notice > a {
+        color: $input-primary-color;
+        font-size: 12px;
+        line-height: 24px;
+      }
+
+      .login-privacy-notice > a {
+        &:hover {
+          color: $button-background-strong;
+        }
+      }
+
+      .sign-up-button {
+        width: inherit;
+        height: 67px;
+
+        button {
+          width: inherit;
+          height: inherit;
+          text-transform: initial;
+          font-size: 18px;
+          font-weight: 400;
+          background-color: $button-background-strong;
+        }
+      }
+
+      .connect-via {
+        width: fit-content;
+        color: $input-primary-color;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .alternative-profiles {
+        height: 67px;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          width: 177px;
+          color: $font-primary-color;
+          border-color: $border-primary-color;
+          svg {
+            width: 33px;
+            height: 33px;
+          }
+        }
+      }
+
+      .already-registered {
+        text-align: center;
+        color: $input-primary-color;
+        font-size: 20px;
+        font-weight: 400;
+
+        > a {
+          color: $button-background-strong;
+        }
+      }
+    }
+  }
+}

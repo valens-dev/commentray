@@ -5,10 +5,9 @@ import Channels from "../Channels";
 import NavigationButtons from "../NavigationButtons";
 import StreamChat from "../StreamChat";
 import Header from "../Header";
-import { FilterProvider } from "../../contexts/FilterContext";
 
 const Home = () => (
-  <FilterProvider>
+  <>
     <Header />
     <Streams />
     <NavigationButtons />
@@ -17,7 +16,7 @@ const Home = () => (
       <StreamRadio />
       <StreamChat />
     </div>
-  </FilterProvider>
+  </>
 );
 
 export default Home;

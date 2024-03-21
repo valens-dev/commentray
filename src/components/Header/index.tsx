@@ -9,6 +9,7 @@ import HamburgerMenu from "../HamburgerMenu";
 
 const Header = () => {
   const navigate = useNavigate();
+  const isLoggedIn = false;
 
   return (
     <div className="header">
@@ -37,17 +38,27 @@ const Header = () => {
       </div>
 
       <div className="header-right-elements">
-        <div className="header-live-container">
-          <Button variant="contained" onClick={() => navigate("/go-live-page")}>
-            Go Live
-          </Button>
-        </div>
-        <div className="header-menu">
-          <HamburgerMenu />
-        </div>
-        <div className="header-user-settings">
-          <img src={profilePicture} />
-        </div>
+        {isLoggedIn ? (
+          <>
+            <div className="header-live-container">
+              <Button variant="contained" onClick={() => navigate("/go-live")}>
+                Go Live
+              </Button>
+            </div>
+            <div className="header-menu">
+              <HamburgerMenu />
+            </div>
+            <div className="header-user-settings">
+              <img src={profilePicture} />
+            </div>
+          </>
+        ) : (
+          <div className="header-live-container">
+            <Button variant="contained" onClick={() => navigate("/login")}>
+              Sign In
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

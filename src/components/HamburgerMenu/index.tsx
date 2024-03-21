@@ -2,7 +2,6 @@ import { Button, Menu, MenuItem } from "@mui/material";
 import { useState, MouseEvent } from "react";
 
 const HamburgerMenu = () => {
-
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 

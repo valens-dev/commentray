@@ -56,9 +56,11 @@
   }
 
   .header-right-elements {
-    display: flex;
-    align-items: center;
     height: 100%;
+    width: 262px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .header-hamburger-icon {
