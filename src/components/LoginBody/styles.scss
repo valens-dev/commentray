@@ -12,6 +12,7 @@
     width: 566px;
     max-height: 728px;
     padding: 32px;
+    border-radius: 9px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -106,6 +107,10 @@
           width: 177px;
           color: $font-primary-color;
           border-color: $border-primary-color;
+          svg {
+            width: 33px;
+            height: 33px;
+          }
         }
       }
 
