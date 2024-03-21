@@ -28,18 +28,19 @@
           display: none;
         }
       }
-    .MuiTouchRipple-root {
+      .MuiTouchRipple-root {
         color: $button-background-soft;
+      }
     }
-  }
 
-  .MuiButtonBase-root {
-    padding: 0;
-    height: 51px;
-    width: 51px;
-  }
+    .MuiButtonBase-root {
+      padding: 0;
+      height: 51px;
+      width: 51px;
+    }
 
-  .MuiTouchRipple-root {
-    color: $button-background-soft;
+    .MuiTouchRipple-root {
+      color: $button-background-soft;
+    }
   }
 }
