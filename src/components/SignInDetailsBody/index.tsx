@@ -15,10 +15,10 @@ import SearchIcon from "@mui/icons-material/Search";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
 import { useState } from "react";
-import { Filter } from "./../../data/interfaces";
+import { Filter } from "../../data/interfaces";
 import interests from "../../data/interests";
 
-const LoginBody = () => {
+const SignInDetailsBody = () => {
   const [allInterests, setAllInterests] = useState<Filter[]>(
     interests as Filter[]
   );
@@ -97,4 +97,4 @@ const LoginBody = () => {
   );
 };
 
-export default LoginBody;
+export default SignInDetailsBody;
