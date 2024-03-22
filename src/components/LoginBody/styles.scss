@@ -21,7 +21,6 @@
     .box-title-wrapper {
       width: 100%;
       height: fit-content;
-      padding-bottom: 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -51,6 +50,7 @@
           .MuiInputBase-root {
             height: 50px;
             background-color: $background-primary-color;
+            border-radius: 9px;
 
             .MuiInputAdornment-root,
             input {
