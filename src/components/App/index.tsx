@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../Home";
 import GoLive from "../GoLive";
-import Login from "../Login";
+import SignIn from "../SignIn";
+import SignInDetails from "../SignInDetails";
 import { FilterProvider } from "../../contexts/FilterContext";
 
 const App = () => (
@@ -9,7 +10,8 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/go-live" element={<GoLive />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/sign-in" element={<SignIn />} />
+      <Route path="/sign-in-details" element={<SignInDetails />} />
     </Routes>
   </FilterProvider>
 );

@@ -8,7 +8,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-const LoginBody = () => {
+const SignInBody = () => {
   return (
     <div className="login-body">
       <div className="login-section">
@@ -105,4 +105,4 @@ const LoginBody = () => {
   );
 };
 
-export default LoginBody;
+export default SignInBody;

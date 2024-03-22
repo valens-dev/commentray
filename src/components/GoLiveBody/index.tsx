@@ -18,14 +18,10 @@ import mediator1 from "@assets/mediator-1.png";
 import mediator2 from "@assets/mediator-2.png";
 import mediator3 from "@assets/mediator-3.png";
 import { useState } from "react";
-import { Category } from "../../data/interfaces";
+import { Filter } from "../../data/interfaces";
 import SearchBox from "../SearchBox";
 import ToggleButtons from "../ToggleButtons";
 import categories from "../../data/streamCategories";
-
-interface Filter extends Category {
-  isActive: boolean;
-}
 
 const GoLiveBody = () => {
   const [allFilters, setAllFilters] = useState<Filter[]>(
