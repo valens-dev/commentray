@@ -54,7 +54,7 @@ const Header = () => {
           </>
         ) : (
           <div className="header-live-container">
-            <Button variant="contained" onClick={() => navigate("/login")}>
+            <Button variant="contained" onClick={() => navigate("/sign-in")}>
               Sign In
             </Button>
           </div>

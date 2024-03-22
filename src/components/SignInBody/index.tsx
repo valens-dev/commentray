@@ -7,8 +7,10 @@ import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined
 import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { useNavigate } from "react-router-dom";
 
 const SignInBody = () => {
+  const navigate = useNavigate();
   return (
     <div className="login-body">
       <div className="login-section">
@@ -82,7 +84,7 @@ const SignInBody = () => {
             </a>
           </div>
           <div className="sign-up-button">
-            <Button variant="contained">Sign Up</Button>
+            <Button variant="contained" onClick={() => navigate("/sign-in-details")}>Sign Up</Button>
           </div>
           <div className="connect-via">or connect via</div>
           <div className="alternative-profiles">

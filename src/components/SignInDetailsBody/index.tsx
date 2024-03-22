@@ -17,8 +17,11 @@ import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
 import { useState } from "react";
 import { Filter } from "../../data/interfaces";
 import interests from "../../data/interests";
+import { useNavigate } from "react-router-dom";
 
 const SignInDetailsBody = () => {
+  const navigate = useNavigate();
+
   const [allInterests, setAllInterests] = useState<Filter[]>(
     interests as Filter[]
   );
@@ -89,7 +92,7 @@ const SignInDetailsBody = () => {
             </FormControl>
           </div>
           <div className="save-button">
-            <Button variant="contained">Save</Button>
+            <Button variant="contained" onClick={() => navigate("/log-in")}>Save</Button>
           </div>
         </div>
       </div>
