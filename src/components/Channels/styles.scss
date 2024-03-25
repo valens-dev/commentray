@@ -8,6 +8,15 @@
   margin: 20px 0;
   font-family: $font-family, sans-serif;
 
+  .ch-live-now {
+    color: white;
+    padding-left: 32px;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+  }
+
   .ch-head {
     display: flex;
     flex-direction: row;
@@ -53,4 +62,12 @@
       width: 100%;
     }
   }
+}
+
+.ch-container.ch-stream-screen {
+  width: 346px;
+  background-color: $primary-color;
+  margin: 0;
+  margin-left: 32px;
+  padding-top: 32px;
 }

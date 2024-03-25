@@ -1,0 +1,39 @@
+.text {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.stream-broadcaster {
+    flex: 1;
+}
+
+.str-video {
+    width: 100%;
+}
+#root > div > div.stream-screen-left > main > div > div.stream-broadcaster > div.str-video__call-controls {
+    > div:nth-child(1),
+    > div:nth-child(2) {
+        display: none;
+    }
+}
+
+.str-video__livestream-layout__wrapper
+    > div.str-video__participant-view.str-video__participant-view--no-audio.str-video__livestream-layout__floating-participant.str-video__livestream-layout__floating-participant--top-right {
+    width: 119px;
+    height: 70px;
+    top: 47px;
+    right: 12px;
+    border-radius: 10;
+}
+
+#root
+    > div
+    > div.stream-screen-left
+    > main
+    > div
+    > div.stream-broadcaster
+    > div.str-video__livestream-layout__wrapper
+    > div.str-video__participant-view.str-video__participant-view--no-audio.str-video__livestream-layout__floating-participant.str-video__livestream-layout__floating-participant--top-right
+    > div {
+    display: none;
+}

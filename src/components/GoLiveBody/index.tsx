@@ -1,4 +1,5 @@
-import "./styles.scss";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Button,
   Checkbox,
@@ -9,24 +10,32 @@ import {
   IconButton,
   InputAdornment,
   TextField,
-} from "@mui/material";
-import AddRoundedIcon from "@mui/icons-material/AddRounded";
-import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
-import SearchIcon from "@mui/icons-material/Search";
-import ScheduleIcon from "@mui/icons-material/Schedule";
-import mediator1 from "@assets/mediator-1.png";
-import mediator2 from "@assets/mediator-2.png";
-import mediator3 from "@assets/mediator-3.png";
-import { useState } from "react";
-import { Filter } from "../../data/interfaces";
-import SearchBox from "../SearchBox";
-import ToggleButtons from "../ToggleButtons";
-import categories from "../../data/streamCategories";
+} from '@mui/material';
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
+import SearchIcon from '@mui/icons-material/Search';
+import ScheduleIcon from '@mui/icons-material/Schedule';
+
+import ToggleVideoAudioButtons from '../ToggleVideoAudioButtons';
+import SearchBox from '../SearchBox';
+
+import mediator1 from '@assets/mediator-1.png';
+import mediator2 from '@assets/mediator-2.png';
+import mediator3 from '@assets/mediator-3.png';
+
+import categories from '../../data/streamCategories';
+import { callId } from '../../constants/env';
+
+import './styles.scss';
+import { Filter } from './interfaces';
 
 const GoLiveBody = () => {
+  const navigate = useNavigate();
   const [allFilters, setAllFilters] = useState<Filter[]>(
     categories as Filter[]
   );
+
+  const goLive = () => navigate(`/stream/${callId}`);
 
   const chipClicked = (filter: Filter) => {
     filter.isActive = !filter.isActive;
@@ -54,7 +63,7 @@ const GoLiveBody = () => {
                 {allFilters.map((filter) => (
                   <Chip
                     key={filter.id}
-                    className={`filter-chip ${filter.isActive ? "active" : ""}`}
+                    className={`filter-chip ${filter.isActive ? 'active' : ''}`}
                     label={filter.name}
                     onClick={() => chipClicked(filter)}
                     onDelete={() => {}}
@@ -71,7 +80,7 @@ const GoLiveBody = () => {
             </div>
             <div className="type-title">Type</div>
             <div className="type-toggle">
-              <ToggleButtons />
+              <ToggleVideoAudioButtons />
             </div>
           </div>
           <div className="parallel-right">
@@ -143,7 +152,7 @@ const GoLiveBody = () => {
           </div>
         </div>
         <div className="go-live-button">
-          <Button variant="contained" disableElevation>
+          <Button variant="contained" disableElevation onClick={goLive}>
             Go Live
           </Button>
         </div>
