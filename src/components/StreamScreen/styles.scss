@@ -1,0 +1,31 @@
+@import './../../styles/variables';
+
+.text {
+    color: white;
+}
+
+.str-video__video-placeholder,
+.str-video__livestream-layout__wrapper .str-video__livestream-layout__overlay,
+.str-video__livestream-layout__wrapper {
+    height: 412px;
+}
+
+.stream-screen {
+    display: flex;
+    gap: 20px;
+}
+
+.stream-screen-left {
+    padding-top: 26px;
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.stream-screen-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
